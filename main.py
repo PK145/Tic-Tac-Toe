@@ -43,4 +43,35 @@ def CheckWin():
         Game=Draw    
     else:            
         Game=Running    
+    print("Tic-Tac-Toe Game Designed By Sourabh Somani")    
+print("Player 1 [X] --- Player 2 [O]\n")    
+print()    
+print()    
+print("Please Wait...")    
+time.sleep(3)    
+while(Game == Running):    
+    os.system('cls')    
+    DrawBoard()    
+    if(player % 2 != 0):    
+        print("Player 1's chance")    
+        Mark = 'X'    
+    else:    
+        print("Player 2's chance")    
+        Mark = 'O'    
+    choice = int(input("Enter the position between [1-9] where you want to mark : "))    
+    if(CheckPosition(choice)):    
+        board[choice] = Mark    
+        player+=1    
+        CheckWin()    
+    
+os.system('cls')    
+DrawBoard()    
+if(Game==Draw):    
+    print("Game Draw")    
+elif(Game==Win):    
+    player-=1    
+    if(player%2!=0):    
+        print("Player 1 Won")    
+    else:    
+        print("Player 2 Won")       
              
