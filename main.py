@@ -20,5 +20,7 @@ def CheckPosition(x):
     if(board[x] == ' '):    
         return True    
     else:    
-        return False    
+        return False 
+def CheckWin():    
+    global Game    
    
