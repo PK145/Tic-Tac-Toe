@@ -34,4 +34,8 @@ def CheckWin():
     elif(board[2] == board[5] and board[5] == board[8] and board[2] != ' '):    
         Game = Win    
     elif(board[3] == board[6] and board[6] == board[9] and board[3] != ' '):    
+        Game=Win    
+    elif(board[1] == board[5] and board[5] == board[9] and board[5] != ' '):    
+        Game = Win    
+    elif(board[3] == board[5] and board[5] == board[7] and board[5] != ' '):    
         Game=Win         
